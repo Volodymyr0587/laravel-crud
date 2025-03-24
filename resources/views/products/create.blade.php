@@ -35,6 +35,21 @@
                 <input type="text" name="name" value="{{ old('name') }}" class="form-control" placeholder="Name">
             </div>
         </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-12 mt-4">
+            <div class="form-group">
+                <strong>Category:</strong>
+                <select name="category_id" class="form-select" required>
+                    @foreach($categories as $category)
+                        <option value="{{ $category->id }}" {{ isset($product) && $product->category_id == $category->id ? 'selected' : '' }}>
+                            {{ $category->name }}
+                        </option>
+                    @endforeach
+                </select>
+            </div>
+        </div>
+
+
         <div class="col-xs-12 col-sm-12 col-md-12 mt-4">
             <div class="form-group">
                 <strong>Details:</strong>

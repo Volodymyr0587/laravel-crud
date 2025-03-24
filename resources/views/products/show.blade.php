@@ -26,6 +26,12 @@
             {{ $product->details }}
         </div>
     </div>
+    <div class="col-xs-12 col-sm-12 col-md-12 mt-4">
+        <div class="form-group">
+            <strong>Category: </strong>
+            {{ $product->category->name }}
+        </div>
+    </div>
 </div>
 
 
